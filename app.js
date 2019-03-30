@@ -11,24 +11,12 @@ const app = express();
 app.set('views', './source/template');
 app.set('view engine', 'pug');
 
+// Start using middlewares
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(flash());
-
-app.get('/', function (req, res) {
-
-});
-
-
-app.post('/', function(req, res) {
-    if (!req.body.name || !req.body.email || !req.body.message) {
-        res.send('Не все поля заполнены');
-    } else {
-        res.send('Получилось');
-    }
-    return res.json({ msg: 'Все поля нужно заполнить!', status: 'Error' });
-});
+app.use('/', require('./routes/index'));
 
 app.listen(PORT, function () {
     console.log(`Example app listening on port ${PORT}!`);

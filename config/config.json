@@ -1,0 +1,15 @@
+{
+  "mail": {
+    "subject": "Проверка работоспособности",
+    "user": "filippow.ewgen@yandex.ru",
+    "smtp": {
+      "host": "smtp.gmail.com",
+      "port": 465,
+      "secure": true,
+      "auth": {
+        "user": "my email",
+        "pass": "my password"
+      }
+    }
+  }
+}
