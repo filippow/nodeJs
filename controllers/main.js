@@ -1,6 +1,6 @@
 module.exports = {
     showMainPage: function (req, res) {
-        console.log('show main');
+        res.redirect('/');
     },
     sendEmailMessage: function (req, res) {
         if (!req.body.email || !req.body.name) {

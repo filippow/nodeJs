@@ -1,0 +1,12 @@
+{
+  "products": [],
+  "skills": {},
+  "users": {
+    "admin": {
+      "id": 1,
+      "email": "filippow.ewgen@yandex.ru",
+      "password": "q1"
+    },
+    "usual": []
+  }
+}

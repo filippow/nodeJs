@@ -1,6 +1,7 @@
 const express = require('express');
 const flash = require('connect-flash');
 const bodyParser = require('body-parser');
+const session = require('express-session');
 const path = require('path');
 const PORT = process.env.PORT || 3002;
 
@@ -15,6 +16,7 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(session(require('./config/config').session));
 app.use(flash());
 app.use('/', require('./routes/index'));
 

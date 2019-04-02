@@ -1,4 +1,15 @@
 {
+  "session": {
+    "secret": "extjs",
+    "key": "sessionkey",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": 60000
+    },
+    "saveUninitialized": false,
+    "resave": false
+  },
   "mail": {
     "subject": "Проверка работоспособности",
     "user": "filippow.ewgen@yandex.ru",
