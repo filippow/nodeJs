@@ -1,6 +1,11 @@
 {
   "products": [],
-  "skills": {},
+  "skills": {
+    "age": 120,
+    "concerts": 760,
+    "cities": 300,
+    "years": 200
+  },
   "users": {
     "admin": {
       "id": 1,

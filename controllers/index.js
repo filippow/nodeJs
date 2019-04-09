@@ -1,13 +1,19 @@
+const skillsModel = require('../models/skills'),
+    config = require('../config/config'),
+    nodemailer = require('nodemailer');
+
 module.exports = {
     showMainPage: function (req, res) {
-        res.redirect('/');
+        console.log('MAIN!!!!!!!!!!!!!!');
+        res.render('pages/index');
     },
+
     sendEmailMessage: function (req, res) {
         if (!req.body.email || !req.body.name) {
             res.status(400).send('Необходимо заполнить все данные');
         } else {
-            var mailConfig = require('../config/config').mail,
-                transporter = require('nodemailer').createTransport(mailConfig.smtp),
+            var mailConfig = config.mail,
+                transporter = nodemailer.createTransport(mailConfig.smtp),
                 mailOptions = {
                     from: 'Филиппов Евгений',
                     to:  mailConfig.user,

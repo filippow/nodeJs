@@ -1,10 +1,11 @@
 module.exports = {
     showLoginForm: function (req, res) {
-
+console.log('Login FORM');
         res.render('pages/login');
     },
 
     authorize: function (req, res) {
+        debugger;
         const db = require('../models/db'),
             dbAdmin = db.get('users').value().admin,
             currentEmail = req.body.email,
